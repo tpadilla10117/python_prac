@@ -279,3 +279,21 @@ else:
   name = 'Trin'
   print([char.upper() for char in name] )
   #['T', 'R', 'I', 'N']
+
+ #Nested Lists:
+  nested_list = [ [1,2,3], [4,5,6], [7,8,9] ]
+
+  print(nested_list[0][1]) #prints 2
+  print(nested_list[1][-1]) #6
+
+  #first loop goes through top level
+  for l in nested_list:
+    #gives us access to the values in the second level:
+    for val in l:
+      print(val) #1 2 3 4 5 6 7 8 9
+      
+  answer = [ [var for var in range(0,3)]]
+  print("Result of first call:", answer)
+
+  answer = [ [var for var in range(0,3)] for var in range(0,3)]
+  print("The nested call:", answer)
