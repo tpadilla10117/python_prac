@@ -50,3 +50,29 @@ for value in donations.values():
 print("name" in instructor) #prints True
 print("phone" in instructor) #prints false
 print("name" in instructor.keys() ) #prints true
+
+# .clear() method:
+fake_dictionary = dict(a=1, b=2)
+print(fake_dictionary)
+print(fake_dictionary.clear()) #None
+
+  # .copy() method:
+c = instructor.copy()
+print(c) #prints the copied instructor dictionary
+
+  # .fromKeys() method:
+a = {}.fromkeys("a","b")
+b = {}.fromkeys(["email"], 'unknown')
+d = {}.fromkeys("a", [1,2,3])
+print(a)
+print(b)
+print(d)
+
+game_properties = ["current_score", "high_score", "number_of_lives", "items_in_inventory", "power_ups", "ammo", "enemies_on_screen", "enemy_kills", "enemy_kill_streaks", "minutes_played", "notifications", "achievements"]
+
+initial_game_state = dict.fromkeys(game_properties, 0)
+
+print(initial_game_state)
+
+  # .get() method:
+print(instructor.get("name")) #prints Trin
