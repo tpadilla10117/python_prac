@@ -76,3 +76,34 @@ print(initial_game_state)
 
   # .get() method:
 print(instructor.get("name")) #prints Trin
+
+#.pop() method:
+games_owned = {
+  "playstation" : "uncharted",
+  "switch": "zelda",
+  "xbox" : "halo"
+}
+print(games_owned.pop("switch")) #prints zelda
+
+  #.popitem() method:
+print(games_owned.popitem()) #returns a random key-value pair
+
+  #.update() method:
+first = dict(a=1, b=2, c=3)
+second = {}
+second.update(first)
+print(second) #second now has the contents of first
+
+#overwrite existing key:
+second['a'] = "AMAZING"
+print("Here is updated second: ", second)
+
+#Practice -
+inventory = {'croissant': 19, 'bagel': 4, 'muffin': 8, 'cake': 1}
+
+#Dictionary Comprehension:
+prac_nums = dict(first=1, second=2, third=3)
+
+squared_nums = {key: value ** 2 for key, value in prac_nums.items() }
+
+print("After running the dict comprehension: ",squared_nums)
