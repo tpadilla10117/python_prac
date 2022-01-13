@@ -101,9 +101,40 @@ print("Here is updated second: ", second)
 #Practice -
 inventory = {'croissant': 19, 'bagel': 4, 'muffin': 8, 'cake': 1}
 
+
 #Dictionary Comprehension:
 prac_nums = dict(first=1, second=2, third=3)
 
 squared_nums = {key: value ** 2 for key, value in prac_nums.items() }
 
 print("After running the dict comprehension: ",squared_nums)
+#After running the dict comprehension:  {'first': 1, 'second': 4, 'third': 9}
+
+str1 = "ABC"
+str2 = "123"
+
+combo = {str1[i]: str2[i] for i in range(0, len(str1) ) }
+
+print("Here is the combo variable: ", combo) #Here is the combo variable:  {'A': '1', 'B': '2', 'C': '3'}
+
+list1 = ["CA", "NJ", "RI"]
+list2 = ["California", "New Jersey", "Rhode Island"]
+
+answer ={}
+
+answer = {list1[i]:list2[i] for i in range(0, 3)}
+
+print("The answer: ", answer)
+
+person = [["name", "Jared"], ["job", "Musician"], ["city", "Bern"]]
+
+person_answer = {x[0]:x[1] for x in person}
+
+print("Here is person_answer: ", person_answer)
+
+# person_answer = dict(person)
+
+# print(person_answer)
+
+asc2 = {i: chr(i) for i in range(65,91)}
+print(asc2)
