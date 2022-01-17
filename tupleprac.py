@@ -29,3 +29,22 @@ print( p.count(1) ) #tells you how much the passed in parameter occurs
 
 #index method:
 print("using the indec method on a tuple: ", p.index(1))
+
+#Sets:
+
+s = set({1, 4,5})
+print(4 in s) #returns True
+
+#use loop to access values:
+snums = {1,2,3,4}
+for number in snums:
+  print("Looping through a set: ", number)
+
+#add method:
+snums.add(5)
+print("After adding : ", snums) #returns {1, 2, 3, 4, 5}
+
+#remove method:
+snums.remove(5)
+print("After using theremove method: ", snums) #{1, 2, 3, 4}
+
