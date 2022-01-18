@@ -61,3 +61,29 @@ def exponent(num,power=2):
   return num **power
 
 print("Running the exponent function: ",exponent(2))
+
+
+days = {"1":"Sunday", "2":"Monday", "3":"Tuesday", "4":"Wednesday", "5":"Thursday", "6":"Friday", "7":"Saturday"}
+print(days.get("2"))
+
+sample_days=["Sunday","Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+print(sample_days[2])
+
+def return_day(num=1):
+    days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+    if num > 0 and num <= len(days):
+        # use num - 1 because lists start at 0 
+        return days[num-1]
+    return None
+
+print(return_day(1))
+
+#Write a function called last_element.  This function takes in one parameter (a list) and returns the last value in the list.  It should return None if the list is empty:
+
+#takes in a list
+def last_element(param):
+    #param[-1] gives the last item in the list
+    if param:
+        return param[-1]
+    return None
