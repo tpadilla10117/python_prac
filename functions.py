@@ -87,3 +87,38 @@ def last_element(param):
     if param:
         return param[-1]
     return None
+  
+#Function takes in 2 parameters (both numbers).  If the first is greater than the second, this function returns "First is greater" if the second number is greater than the first, returns "Second is greater"
+def number_compare(num1, num2):
+    if num2 < num1:
+        return "First is greater"
+    elif num2 > num1:
+        return "Second is greater"
+    return "Numbers are equal"
+
+
+def list_manipulation(collection, command, location, value=None):
+    if(command == "remove" and location == "end"):
+        return collection.pop()
+    elif(command == "remove" and location == "beginning"):
+        return collection.pop(0)
+    elif(command == "add" and location == "beginning"):
+        collection.insert(0,value)
+        return collection
+    elif(command == "add" and location == "end"):
+        collection.append(value)
+        return collection
+
+#Write a function that accepts a list and a search term (this will always be a primitive value) and returns the number of times the seearch_term appears in the list:
+
+def frequency(collection, term):
+    return collection.count(term)
+
+#Write a function that accepts a list of numbers and returns the product of all even numbers in the list:
+
+def multiply_even_numbers(collection):
+    product = 1
+    for num in collection:
+        if num % 2 == 0:
+            product = product * num
+    return product
