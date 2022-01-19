@@ -122,3 +122,54 @@ def multiply_even_numbers(collection):
         if num % 2 == 0:
             product = product * num
     return product
+
+#Keyword Arguments with Functions:
+def full_name(first, last):
+  return "Your name is {first} {last}"
+
+print(full_name(first="Trin", last="Padilla") )
+
+#Global Scoping:
+total = 0
+def increment():
+  global total
+  total += 1
+  return total
+
+print("Invoking increment and practiving using the global scope: ", increment() ) # prints 
+
+#nonlocal scoping:
+def outer():
+  count = 0
+  def inner():
+    nonlocal count
+    count += 1
+    return count
+  return inner()
+
+print( "Practicing using the nonlocal scope: ", outer() ) #prints 1
+
+#Practicing Documenting Functions:
+def say_hello():
+  """A simple function that returns the string hello """
+  return "Hello!"
+
+print( say_hello.__doc__) #A simple function that returns the string hello 
+
+#Using *args :
+def sum_all_nums(*args):
+  total = 0
+  for num in args:
+    total += num
+  return total
+
+print("Practicing using the *args operatot: ", sum_all_nums(4,6,9,4, 10) ) #prints 33
+
+
+def ensure_correct_info(*args):
+  if "Colt" in args and "Steele" in args:
+    return "Welcome back Colt!"
+  return "Not sure who you are..."
+
+print( ensure_correct_info(1, True, "Steele", "Colt") )
+print( ensure_correct_info())
